@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-full flex flex-column lg:flex-row align-items-center">
+  <div class="w-full max-w-full h-full flex flex-column lg:flex-row align-items-center py-8 px-3 lg:px-0 layout-margin">
     <div class="flex-grow-1 max-w-30rem">
       <!-- <h6 class="my-0 bg-yellow-50 text-yellow-500"></h6> -->
       <div class="my-0 text-yellow-500 flex ">
@@ -19,11 +19,11 @@
           <div class="mb-2 text-xl">Aksara Batak</div>
           <div
 
-            class="batak-script-char text-primary-100 bg-primary-700 flex align-items-center justify-content-center  p-6 border-round w-10rem h-10rem max-w-10rem max-h-10rem"
+            class="batak-script-char text-primary-100 bg-primary-700 flex align-items-center justify-content-center p-4 lg:p-6 border-round w-8rem h-8rem lg:w-10rem lg:h-10rem lg:max-w-10rem lg:max-h-10rem"
             style="aspect-ratio: 1;"
           >
             <Transition name="slide-fade">
-              <span :key="batakScripts.index" style="font-size: 4rem;">
+              <span :key="batakScripts.index" class="text-4xl lg:text-6xl">
                 {{ batakScripts.items[batakScripts.index].char }}
               </span>
             </Transition>
@@ -33,11 +33,11 @@
         <div>
           <div class="mb-2 text-xl">Bunyi</div>
           <div
-            class="batak-script-char text-primary-100 bg-primary-700 flex align-items-center justify-content-center  p-6 border-round w-10rem h-10rem max-w-10rem max-h-10rem"
+            class="batak-script-char text-primary-100 bg-primary-700 flex align-items-center justify-content-center p-4 lg:p-6 border-round w-8rem h-8rem lg:w-10rem lg:h-10rem lg:max-w-10rem lg:max-h-10rem"
             style="aspect-ratio: 1;"
           >
             <Transition name="slide-fade-reverse">
-              <span :key="batakScripts.index" style="font-size: 4rem;">
+              <span :key="batakScripts.index" class="text-4xl lg:text-6xl">
                 {{ batakScripts.items[batakScripts.index].sound }}
               </span>
             </Transition>
@@ -48,10 +48,10 @@
           <i class="text-primary-50 text-2xl pi pi-chevron-right cursor-pointer" @click="nextIndex"></i>
         </div>
       </div>
-      <div class="flex flex-wrap align-items-center h-4rem gap-2">
+      <div class="flex flex-wrap align-items-center justify-content-center h-6rem lg:h-4rem gap-2">
         <span
           v-for="(item, index) in batakScripts.items"
-          class="batak-script cursor-pointer"
+          class="batak-script cursor-pointer text-2xl lg:text-3xl"
           :class="index === batakScripts.index ? 'selected text-primary-50' : 'text-primary-300'"
           :key="index"
           @click="batakScripts.index = index"
@@ -138,13 +138,13 @@ const batakScripts = ref({
 .batak-script {
   transition: color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: font-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  font-size: 2rem;
+  /* font-size: 2rem; */
 }
 
 .batak-script.selected {
   transition: color 1.0s cubic-bezier(0.25, 0.8, 0.25, 1);
   transition: font-size 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  font-size: 4rem;
+  /* font-size: 4rem; */
 }
 
 .batak-script-char {
@@ -166,13 +166,13 @@ const batakScripts = ref({
 
 .slide-fade-enter-from,
 .slide-fade-leave-to {
-  transform: translateY(40px);
+  transform: translateY(30px);
   opacity: 0;
 }
 
 .slide-fade-reverse-enter-from,
 .slide-fade-reverse-leave-to {
-  transform: translateY(-40px);
+  transform: translateY(-30px);
 
   opacity: 0;
 }

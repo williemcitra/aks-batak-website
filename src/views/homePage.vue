@@ -1,6 +1,6 @@
 <template>
   <div class="bg-primary-50">
-    <div class="bg-primary-900 h-30rem w-full flex align-items-center layout-margin">
+    <div class="bg-primary-900 w-full flex align-items-center h-full">
       <BannerSlider/>
     </div>
 
