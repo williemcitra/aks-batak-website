@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full max-w-full h-full flex flex-column lg:flex-row align-items-center py-8 px-3 lg:px-0 layout-margin">
+  <div class="w-full max-w-full h-full flex flex-column lg:flex-row align-items-center py-8 layout-margin">
     <div class="flex-grow-1 max-w-30rem">
       <!-- <h6 class="my-0 bg-yellow-50 text-yellow-500"></h6> -->
       <div class="my-0 text-yellow-500 flex ">
